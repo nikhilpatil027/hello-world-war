@@ -1,3 +1,4 @@
+hotname
 ls
 if [ -d hello-world-war ]
 then
