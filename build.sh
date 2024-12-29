@@ -1,4 +1,4 @@
-hotname
+hostname
 ls
 if [ -d hello-world-war ]
 then
