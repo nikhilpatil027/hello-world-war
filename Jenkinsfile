@@ -19,7 +19,7 @@ pipeline {
            }
             post {
     success {
-        mail to: "shettyshrikanta@gmail.com",
+        mail to: "nikhilrpatil027@gmail.com",
              subject: "Jenkins Job Success",
              body: "The Jenkins job completed successfully."
     }
