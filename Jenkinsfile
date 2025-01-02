@@ -1,7 +1,8 @@
 pipeline {
     agent { label 'dev' }
       stages {
-        stage('test') {
+        stage('checkout') {
+            sh 'git clone 
             steps {
                 echo 'Hello World'
             }
