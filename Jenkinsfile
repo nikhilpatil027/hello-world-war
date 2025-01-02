@@ -24,7 +24,7 @@ pipeline {
              body: "The Jenkins job completed successfully."
     }
     failure {
-        mail to: "shettyshrikanta@gmail.com",
+        mail to: "nikhilrpatil027@gmail.com",
              subject: "Jenkins Job Failed",
              body: "The Jenkins job failed. Check the logs for details."
     }
