@@ -15,7 +15,7 @@ pipeline {
         }
       stage('deploy') {
            steps {
-             sh 'scp /home/ubuntu/workspace/pipeline_job2/target/hello-world-war-1.0.0.war ubuntu@172.31.38.133:/opt/apache-tomcat-10.1.34/webapps/'
+             sh 'cp /home/ubuntu/workspace/pipeline_job2/target/hello-world-war-1.0.0.war /var/lib/tomcat10/webapps/'
                }
           }
     }
