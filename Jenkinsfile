@@ -29,9 +29,8 @@ pipeline {
              body: "The Jenkins job failed. Check the logs for details."
     }
 }
-}
-    }
+      }
+    
                }
           }
-    }
-}
+
