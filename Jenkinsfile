@@ -1,19 +1,22 @@
 pipeline {
-    agent { label 'dev' }
-      stages {
+    agent { label 'slave2' }
+    stages {
         stage('checkout') {
-            sh 'rm -rf hello-world-war'
-            sh 'git clone https://github.com/nikhilpatil027/hello-world-war.git'
-        }
-          stage ('build') {
-              sh 'cd hello-world-war'
-              sh 'pwd'
-              sh 'mvn clean package'
-              
-          }
             steps {
-                echo 'Hello World'
+                sh 'rm -rf hello-world-war'
+                sh 'git clone https://github.com/nikhilpatil027/hello-world-war.git'
+            }
+        } 
+       stage('build') {
+            steps {
+                sh 'cd hello-world-war'
+                sh 'mvn clean package'
             }
         }
+      stage('deploy') {
+           steps {
+             sh 'scp /home/ubuntu/jenkins/workspace/pipeline_job2/target/hello-world-war-1.0.0.war root@172.31.38.133:/opt/apache-tomcat-10.1.34/webapps/'
+               }
+          }
     }
 }
