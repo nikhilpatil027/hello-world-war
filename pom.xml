@@ -32,7 +32,7 @@
 		</plugins>
 	</build>
 	<properties>
-	    <sonar.projectKey>nikhilpatil027</sonar.projectKey>
+	    <sonar.projectKey>nikhilpatil027_hello-world-war</sonar.projectKey>
 	    <sonar.organization>nikhilpatil027</sonar.organization>
 	    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         </properties>
