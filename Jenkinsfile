@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-       jfrog_token = credentials('jfrog-api-token')
+       jfrog_api_token = credentials('jfrog_token')
     }
        stages 
     {
@@ -13,7 +13,7 @@ pipeline {
                 sudo su
                 cd /opt/apache-tomcat-10.1.34/webapps
                 ls
-                 curl -L -u "jfrog_token_USR:jfrog_token_PWD" -O "http://3.110.105.32:8082/artifactory/hello-world-war-libs-release/com/efsavage/hello-world-war/1.0.15/hello-world-war-1.0.10.war"
+                 curl -L -u "jfrog_api_token_USR:jfrog_api_token_PWD" -O "http://3.110.105.32:8082/artifactory/hello-world-war-libs-release/com/efsavage/hello-world-war/1.0.15/hello-world-war-1.0.10.war"
                 pwd
                 cd /opt/apache-tomcat-10.1.34/bin
                 ./shutdown.sh
