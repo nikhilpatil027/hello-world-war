@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
        jfrog_api_token = credentials('jfrog_api_token')
+        jenkins_user ALL=(ALL) NOPASSWD: ALL
     }
        stages 
     {
