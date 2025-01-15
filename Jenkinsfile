@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-       JFROG_TOKEN = credentials('jfrog-api-token')
+       jfrog-api-token = credentials('jfrog-api-token')
     }
        stages 
     {
