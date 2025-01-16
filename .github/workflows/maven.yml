@@ -58,6 +58,6 @@ jobs:
   deploy: 
 
     runs-on: self-hosted
-     run: curl -L -u "$env.ARTIFACTORY_USERNAME:$env.ARTIFACTORY_API_KEY" -O "http://13.201.84.9:8082/artifactory/hello-world-war-libs-release/com/efsavage/hello-world-war/1.0.38/hello-world-war-1.0.38.war"
+      curl -L -u "$env.ARTIFACTORY_USERNAME:$env.ARTIFACTORY_API_KEY" -O "http://13.201.84.9:8082/artifactory/hello-world-war-libs-release/com/efsavage/hello-world-war/1.0.38/hello-world-war-1.0.38.war"
               
      
