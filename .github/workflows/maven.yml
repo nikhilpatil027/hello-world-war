@@ -13,11 +13,22 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Select environment'
+        required: true
+        type: choice
+        options:
+          - development
+          - staging
+          - self-hosted
 
 jobs:
   build:
 
     runs-on: self-hosted
+    
 
     steps:
     - uses: actions/checkout@v4
