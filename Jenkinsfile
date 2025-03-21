@@ -13,7 +13,7 @@ pipeline {
         stage('Checkout') {
             steps {
               
-                git clone 'https://github.com/shubhalokesh/hello-world-war.git' 
+                git 'https://github.com/shubhalokesh/hello-world-war.git' 
             }
         }
 
